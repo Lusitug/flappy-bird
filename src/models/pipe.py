@@ -5,7 +5,6 @@ import os
 base_path = os.path.dirname(os.path.abspath(__file__))
 image_path = os.path.join(base_path, '../../imgs')
 
-
 from models.bird import Bird
 
 PIPE_IMAGE = pygame.transform.scale2x(pygame.image.load(os.path.join(image_path,'pipe.png')))

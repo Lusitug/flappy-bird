@@ -6,15 +6,18 @@ from models.bird import Bird
 from models.pipe import Pipe
 from models.floor import Floor
 
+pygame.init()
+pygame.font.init()
+
 current_path = os.path.dirname(__file__)
 image_path = os.path.join(current_path, '..', 'imgs')
 
 WINDOW_WIDTH = 500
 WINDOW_HEIGHT = 800
-BG_IMAGE = pygame.transform.scale2x(pygame.image.load(os.path.join(image_path,'bg.png')))
-POINTS_FONT = pygame.font.SysFont('arial', 50)
 
-pygame.font.init()
+BG_IMAGE = pygame.transform.scale2x(pygame.image.load(os.path.join(image_path,'bg.png')))
+
+POINTS_FONT = pygame.font.SysFont('arial', 50)
 
 def draw_screen(screen, birds: List[Bird], pipes: List[Pipe], floor: Floor, points):
     screen.blit(BG_IMAGE, (0, 0))
